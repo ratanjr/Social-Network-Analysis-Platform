@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Search Results</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        .node {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+    <h1>Node Search Results</h1>
+    <ul>
+        {% for node,rel,neighbor in nodes %}
+        <li>Node {{ node }}- {{rel}} -> Node {{neighbor}}</li>
+        {% endfor %}
+        {% for c in count %}
+            <h2>Total friends : {{c}}</h2>
+        {% endfor %}
+    </ul>
+    </div>
+</body>
+</html>

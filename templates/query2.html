@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo4j Query Results</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Connections</h1>
+    <ul>
+        {% for node, rel, neighbor in data %}
+        <li>Node {{ node }} - {{ rel }} -> Node {{ neighbor }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+</body>
+</html>

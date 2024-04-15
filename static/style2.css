@@ -1,0 +1,42 @@
+  body {
+            font-family: Arial, sans-serif;
+            /* margin: 0; */
+            padding: 0;
+            margin-top: 300px;
+            background-image: url('bg5.jpg'); /* Specify the path to your background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /*Center the background image */
+            /* background-repeat: no-repeat;  */
+        }
+        .container {
+            max-width: 800px;
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.7); /* Add a semi-transparent white background*/
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #fffefe;
+        }
+        h2 {
+            text-align: center;
+            color: #fffefe;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color:#fffefe;
+        }
+        a {
+            color: #dddfe2;
+            text-decoration: none;
+        }

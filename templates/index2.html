@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Network Analyzer</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h1>Social Network Analyzer</h1>
+    <div>
+        <button class="button" onclick="findInfluentialUsers()">Find Influential Users</button>
+        <button class="button" onclick="window.location.href='/get_network_data'">Fetch Network Data</button>
+        <button class="button" onclick="window.location.href='/filter_graph'">Filter Network Data</button>
+        <button class="button" onclick="window.location.href='/query1'">Display list of nodes</button>
+        <button class="button" onclick="window.location.href='/query2'">Display connection</button>
+        <button class="button" onclick="window.location.href='/query3'">Common Friends</button>
+        <button class="button" onclick="window.location.href='/search'">Search Node</button>
+        
+    </div>
+    <div id="results"></div>
+
+    <script>
+        
+        function findInfluentialUsers() {
+            fetch('/influential-users')
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = '<h2>Influential Users</h2><ul>';
+                    data.forEach(user => {
+                        resultsDiv.innerHTML += `<li>Node ${user}</li>`;
+                    });
+                    resultsDiv.innerHTML += '</ul>';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+
+    </script>
+</body>
+</html>
